@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>CALCULADORA</h1>
+    
+    <div id="resultados"></div> <!-- Elemento para exibir os resultados -->
+
+    <script>
+        // Convertendo os valores para números
+        let valor1 = parseFloat(prompt("Digite o primeiro valor: "));
+        let valor2 = parseFloat(prompt("Digite o segundo valor: "));
+        
+        // Calculando a soma
+        let soma = valor1 + valor2;
+
+        // Variáveis para subtração e divisão
+        let sub, div;
+
+        // Condicional para subtração e divisão
+        if (valor1 > valor2) {
+            sub = valor1 - valor2;
+            div = valor1 / valor2;
+        } else {
+            sub = valor2 - valor1;
+            div = valor2 / valor1;
+        }
+
+        // Multiplicação
+        let mult = valor1 * valor2;
+
+        // Exibindo os resultados no HTML
+        const resultadosDiv = document.getElementById("resultados");
+        resultadosDiv.innerHTML = `
+            <p>A soma é: ${soma}</p>
+            <p>A subtração é: ${sub}</p>
+            <p>A multiplicação é: ${mult}</p>
+            <p>A divisão é: ${div}</p>
+        `;
+    </script>
+</body>
+</html>
